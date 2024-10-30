@@ -1,0 +1,290 @@
+@import url(../totalCss/total.css);
+.header__table {
+    background: url("../PageTimetable/PageTimetableImages/HomeBg.jpg") no-repeat;
+    background-size: cover;
+    height: 325px;
+}
+
+#table {
+    table-layout: fixed;
+}
+
+.tbl {
+    background-color: #a49151;
+}
+#instrP:hover,
+#instructorsImg:hover,
+#directionP:hover,
+#directionImg:hover {
+    cursor: pointer;
+}
+
+.invisible__left,
+.invisible__right {
+    display: none;
+    flex-direction: column;
+    box-shadow: 8px 14px 3px rgba(0, 0, 0, 0.25);
+}
+
+.dropDownMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.dropDownParagraph {
+    padding: 30px 40px;
+    background-color: #908d8d;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000000;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.dropDownParagraph:hover,
+.dropDownParagraph:active {
+    background-color: #646262;
+}
+
+.visibleBlock {
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+
+.btn__left,
+.btn__right {
+    width: 33.85vw;
+    margin: 100px 0 50px;
+    position: relative;
+}
+
+.label__select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a90404;
+    padding: 30px 50px;
+}
+
+.label__select img {
+    width: 23px;
+    height: 22px;
+}
+
+.label__select p {
+    font-size: 18px;
+    color: #ffffff;
+}
+.content__day {
+    margin-top: 22%;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.content__time {
+    margin-top: 60%;
+}
+.content__direction,
+.content__place,
+.content__trainer {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.content__direction,
+.content__trainer {
+    font-weight: 500;
+    font-size: 0.68vw;
+    line-height: 21px;
+}
+
+.content__place {
+    font-weight: 400;
+    font-size: 0.5vw;
+    line-height: 16px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: 5.5vw repeat(7, 8.4vw);
+    gap: 1vw;
+    padding-bottom: 200px;
+}
+.cell,
+.cellDark,
+.cellTransperent {
+    color: #ffffff;
+    padding: 5px;
+    height: 140px;
+    text-align: center;
+}
+
+.cell {
+    background: linear-gradient(0deg, #3d3d3d, #3d3d3d), #3d3d3d;
+    box-shadow: 0px 2px 6px rgba(2, 2, 4, 2.5);
+}
+
+.cellDark {
+    background: linear-gradient(0deg, #646262, #646262), #646262;
+    box-shadow: 0px 2px 6px rgba(2, 2, 4, 2.5);
+}
+.find__elem {
+    background: #a90404;
+}
+.cellTransperent {
+    background: url(../PageTimetable/PageTimetableImages/time.svg) no-repeat;
+    background-size: contain;
+    margin-top: 25px;
+    margin-bottom: -25px;
+}
+.hidden-string {
+    display: none;
+    position: fixed;
+    top: 10px;
+    font-size: 12px;
+    line-height: 25px;
+    text-wrap: wrap;
+    word-break: break-all;
+}
+@media (min-width: 2560px) {
+    .content__time {
+        margin-top: 45%;
+    }
+}
+@media (max-width: 1440px) {
+    .cell,
+    .cellDark,
+    .cellTransperent {
+        height: 115px;
+    }
+    .label__select {
+        padding: 5px 50px;
+    }
+    .label__select img {
+        width: 18px;
+        height: 14px;
+    }
+}
+@media (max-width: 1280px) {
+    .content__place {
+        font-weight: 400;
+        font-size: 0.7vw;
+    }
+    .content__direction {
+        margin-top: 0px;
+    }
+    .content__time {
+        font-size: 1vw;
+    }
+}
+@media (max-width: 1024px) {
+    .container {
+        margin: 0 9vw;
+    }
+    .calendar {
+        grid-template-columns: 5.5vw repeat(7, 9.9vw);
+    }
+    .content__direction,
+    .content__trainer {
+        font-size: 1vw;
+    }
+    .content__place {
+        font-weight: 100;
+        font-size: 0.9vw;
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 40px 0 26px;
+    }
+    .container {
+        margin: 0 4vw;
+    }
+    nav.active {
+        background: #646262;
+        width: 100vw;
+        margin: 0;
+        top: 92px;
+        padding-left: 5vw;
+    }
+    .calendar {
+        grid-template-columns: 5.5vw repeat(7, 25vw);
+        overflow-x: auto;
+        margin-right: -26px;
+        margin-left: -26px;
+    }
+    .btn__left,
+    .btn__right {
+        width: 45vw;
+    }
+    .content__direction,
+    .content__trainer {
+        font-size: 2vw;
+    }
+    .content__place {
+        font-size: 1.5vw;
+    }
+    .content__day {
+        margin-top: 0%;
+        font-size: 2.5vw;
+        line-height: 30px;
+    }
+    .content__time {
+        font-size: 2vw;
+    }
+    .cellTransperent {
+        margin-top: 42px;
+        margin-bottom: -42px;
+    }
+    .cellDark #9 {
+        background: #a90404;
+        position: fixed;
+    }
+}
+@media (max-width: 414px) {
+    .calendar {
+        grid-template-columns: 12vw repeat(7, 25vw);
+        margin-right: -13px;
+        margin-left: -13px;
+        padding-bottom: 100px;
+    }
+    .visibleBlock {
+        width: min-content;
+        z-index: 10;
+    }
+    .label__select {
+        padding: 0px 10px;
+    }
+    .btn__left,
+    .btn__right {
+        width: 40vw;
+    }
+    .content__time {
+        font-size: 3vw;
+    }
+    .content__day {
+        font-size: 3.5vw;
+    }
+    .content__place {
+        font-size: 2.2vw;
+    }
+}
+@media (max-width: 375px) {
+    .dropDownParagraph {
+        padding: 7px 46px;
+        background-color: #908d8d;
+        box-sizing: border-box;
+        border-bottom: 1px solid #000000;
+        color: #ffffff;
+        font-size: 14px;
+    }
+    .btn__left,
+    .btn__right {
+        margin: 57px 0 26px;
+    }
+    .label__select p {
+        font-size: 14px;
+    }
+}

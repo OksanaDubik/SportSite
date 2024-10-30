@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link href="totalCss/total.css" rel="stylesheet" type="text/css">
+    <link href="totalCss/normalize.css" rel="stylesheet" type="text/css">
+    <link href="mainPage/main.css" rel="stylesheet" type="text/css">
+    <title>Main Page</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="container">
+                <div class="header">
+                    <a href="index.html" class="logo">
+                        <img width="147" height="47" src="mainPage/ImageHeader/logoNew.svg" alt="logo">
+                    </a>
+
+                    <a href="tel:70123456789" class="tel">ТЕЛ: +7(0123) 45-67-89</a>
+                    <div class="menu-icon" id="menu-icon">&#9776;</div>
+                </div>
+            </div>
+
+            <nav class="container" id="navbar">
+
+                <ul>
+                    <li class="dropdown">
+                        акции
+                        <div class="dropdown-content" id="submenu1">
+                            <a href="#">Акция</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        услуги
+                        <div class="dropdown-content" id="submenu2">
+                            <a href="#presentation">услуги</a>
+                        </div>
+
+                    </li>
+                    <li class="dropdown">
+                        расписание
+                        <div class="dropdown-content" id="submenu3">
+                            <a href="./PageTimetable\PageTimetable.html">расписание</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        цены
+                        <div class="dropdown-content" id="submenu4">
+                            <a href="#imgLinks">цены</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        контакты
+                        <div class="dropdown-content" id="submenu5">
+                            <a href="#footer">контакты</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="container">
+                <h1>безлимитный фитнес <br>
+                    до конца лета<br>
+                    5800 ₽
+                </h1>
+                <p class="header__text">первое занятие бесплатно</p>
+            </div>
+            <div class="blur"></div>
+        </header>
+        <article class="news" id="news">
+            <div class="container">
+                <h2>Акции и новости</h2>
+                <h3>Акции и новости</h3>
+                <div class="slider">
+                    <div class="slides">
+                        <!--загружаются слайды-->
+                    </div>
+
+                    <div class="pagination">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </article>
+        <article id="imgLinks" class="img-links">
+            <div class="container">
+                <h2>Фитнес-услуги</h2>
+                <h3>Фитнес-услуги</h3>
+                <div class="links__content"></div>
+                <button class="btn__call openModal">заказать карту</button>
+                <!-- Модальное окно -->
+                <div class="modal myModal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+
+                        <h3 class="form__title">Заказ карты клуба</h3>
+                        <form class="orderForm" novalidate>
+                            <label class="form_label__checked">Выбрать срок абонемента:</label>
+                            <div class="subscription-group">
+                                <div class="subscription-option">
+                                    <input type = "radio" id = "trial" name = "subscription" value = "trial" data-price = 0
+                                        required>
+                                    <label class="form__label-selection" for="trial">Пробное занятие</label>
+                                </div>
+                                <div class="subscription-option">
+                                    <input type="radio" id = "1month" name = "subscription" value = "1month" data-price = '1000'
+                                        required>
+                                    <label class = "form__label-selection" for="1month">На 1 месяц</label>
+                                </div>
+                                <div class="subscription-option">
+                                    <input type="radio" id="6months" name="subscription" value="6months"
+                                        data-price='5000' required>
+                                    <label class="form__label-selection" for="6months">На 6 месяцев</label>
+                                </div>
+                                <div class="subscription-option">
+                                    <input type="radio" id="1year" name="subscription" value="1year" data-price='10000'
+                                        required>
+                                    <label class="form__label-selection" for="1year">На 1 год</label>
+                                </div>
+                            </div>
+
+                            <label class="form_label" for="firstName">Имя:</label>
+                            <input type="text" id="firstName" class="firstName" required>
+
+                            <label class="form_label" for="lastName">Фамилия:</label>
+                            <input type="text" id="lastName" class="lastName" required>
+
+                            <label class="form_label" for="middleName">Отчество:</label>
+                            <input type="text" id="middleName" class="middleName" required>
+
+                            <label class="form_label" for="email">Емейл:</label>
+                            <input type="email" id="email" class="email" required>
+
+                            <label class="form_label" for="phone">Телефон:</label>
+                            <input type="tel" id="phone" class="phone" required pattern="[0-9]{10,15}">
+
+                            <button id="formBtn" type="submit" class="btn__call">Заказать</button>
+                            <p class="error errorMsg"></p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        <article id="presentation" class="presentation">
+            <div class="container">
+                <h2>Клубная карта</h2>
+                <h3>Клубная карта</h3>
+                <div class="presentation__odd">
+                    <div class="presentation__odd-left__img">
+                        <picture>
+                            <source srcset="club-card/imagesClubCard/clubCard1.jpg">
+                            <source srcset="club-card/imagesClubCard/clubCard1.webp">
+                            <img class="presentation__circle" src="club-card/imagesClubCard/clubCard1.webp"
+                                alt="Силовые тренажеры">
+                        </picture>
+                        <div class="presentation__text">
+                            <h4>Силовые тренажеры</h4>
+                            <p>Зал оборудован тренажёрами для всех групп мышц.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="presentation__odd-right__img">
+                        <div class="presentation__text">
+                            <h4>Сбросить лишние килограммы</h4>
+                            <p>Сауна способствует расщеплению жира и выводу его в виде жидкости через кожные поры.
+                            </p>
+                        </div>
+                        <picture>
+                            <source srcset="club-card/imagesClubCard/clubCard2.jpg">
+                            <source srcset="club-card/imagesClubCard/clubCard2.webp">
+                            <img class="presentation__circle" src="club-card/imagesClubCard/clubCard2.webp"
+                                alt="Сбросить лишние килограммы">
+                        </picture>
+                    </div>
+                </div>
+                <div class="presentation__even">
+                    <div class="presentation__even-left__img">
+                        <picture>
+                            <source srcset="club-card/imagesClubCard/clubCard6.jpg">
+                            <source srcset="club-card/imagesClubCard/clubCard6.webp">
+                            <img class="presentation__circle" src="club-card/imagesClubCard/clubCard6.webp"
+                                alt="Сесть на диету">
+                        </picture>
+                        <div class="presentation__text">
+                            <h4>Сесть на диету</h4>
+                            <p>А так же подкрепиться батончиком, или закрыть углеводное окно- не проблема.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="presentation__even-img">
+                        <picture>
+                            <source srcset="club-card/imagesClubCard/clubCard0.jpg">
+                            <source srcset="club-card/imagesClubCard/clubCard0.webp">
+                            <img src="club-card/imagesClubCard/clubCard0.webp" alt="Карта клуба">
+
+                        </picture>
+
+                    </div>
+                    <div class="presentation__even-right__img">
+                        <div class="presentation__text">
+                            <h4>Коррекция фигуры</h4>
+                            <p>Массаж заслуженно можно назвать одним из лучших способов освободить свое тело от
+                                полученных
+                                нагрузок</p>
+                        </div>
+                        <picture>
+                            <source srcset="club-card/imagesClubCard/clubCard3.jpg">
+                            <source srcset="club-card/imagesClubCard/clubCard3.webp">
+                            <img class="presentation__circle" src="club-card/imagesClubCard/clubCard3.webp"
+                                alt="Коррекция фигуры">
+                        </picture>
+                    </div>
+                </div>
+                <div class="presentation__odd">
+                    <div class="presentation__odd-left__img">
+                        <picture>
+                            <source srcset="club-card/imagesClubCard/clubCard5.jpg">
+                            <source srcset="club-card/imagesClubCard/clubCard5.webp">
+                            <img class="presentation__circle" src="club-card/imagesClubCard/clubCard5.webp"
+                                alt="Ежедневные групповые занятия">
+                        </picture>
+                        <div class="presentation__text">
+                            <h4>Ежедневные групповые занятия</h4>
+                            <p>Различные направления помогут быть в тонусе.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="presentation__odd-right__img">
+                        <div class="presentation__text">
+                            <h4>Квалифицированные тренеры</h4>
+                            <p>Каждый наш тренер всегда рад помочь вам по любому вопросу.</p>
+                        </div>
+                        <picture>
+                            <source srcset="club-card/imagesClubCard/clubCard4.jpg">
+                            <source srcset="club-card/imagesClubCard/clubCard4.webp">
+                            <img class="presentation__circle" src="club-card/imagesClubCard/clubCard4.webp"
+                                alt="Квалифицированные тренеры">
+                        </picture>
+                    </div>
+                </div>
+                <button class="btn__call openModal">заказать карту</button>
+
+            </div>
+        </article>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__column">
+                <a href="../index.html" class="logo">
+                    <img class="footer__logo" width="147" height="47" src="mainPage/ImageHeader/logoNew.svg" alt="logo">
+                </a>
+                <a class="footer__agreement" href="Agreement/agreement.html">Пользовательское соглашение</a>
+                <div class="footer__social">
+                    <a href=""><img src="footer/footerImg/vk.svg" alt="vk"></a>
+                    <a href=""><img src="footer/footerImg/yutb.svg" alt="youtube"></a>
+                    <a href=""><img src="footer/footerImg/tgr.svg" alt="telegram"></a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <ul>
+                    <li><a href="#imgLinks">Услуги</a></li>
+                    <li><a href="">Расписание</a></li>
+                    <li><a href="">Цены</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <ul>
+                    <li>
+                        <p>Телефон: +7(0123) 45-67-89</p>
+                    </li>
+                    <li>
+                        <p>Наш адрес: 600137</p>
+                    </li>
+                    <li>
+                        <p>Российская федерация</p>
+                    </li>
+                    <li>
+                        <p>г. Москва ул.Бассейная д.27</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="totalJs/navBar.js"></script>
+    <script src="totalJs/hoverBtn.js"></script>
+    <script src="totalJs/imgLinks.js"></script>
+    <script src="totalJs/modal.js"></script>
+    <script src="totalJs/form.js"></script>
+    <script src="totalJs/news.js"></script>
+</body>
+
+</html>
